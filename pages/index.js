@@ -9,7 +9,6 @@ export default function Home() {
       fontFamily: 'sans-serif',
     }}>
       <h1>sheldon lewis</h1>
-      <p>indie builder, engineer, and explorer.</p>
     </main>
   )
 }
