@@ -11,8 +11,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "^15.5.7",
+    "next-mdx-remote": "^6.0.0",
     "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "react-dom": "^19.2.1",
+    "rehype-slug": "^6.0.0"
   }
 }
