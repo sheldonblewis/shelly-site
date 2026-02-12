@@ -7,7 +7,7 @@ export default function Adventures() {
     <>
       <PageMeta title="adventures" />
 
-      <Section title="adventures" subtitle="adventures that mean something to me" />
+      <Section title="adventures" />
 
       <div className="section">
         <p>
