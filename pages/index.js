@@ -44,10 +44,10 @@ export default function Home() {
 
       <div className="section">
         <p style={{ marginBottom: '0.75rem' }}>
-          this site is under construction as of feb 11, 2026. it will be done by next week, feb 18, 2026.
+          this site is under construction as of april 21, 2026. it will be done by next week, april 28, 2026.
         </p>
         <p>
-          feel free to check out these in the meantime, i think they represent me pretty well :){' '}
+          feel free to check these out in the meantime, i think they represent me pretty well :){' '}
           <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">polarsteps</a>
           {' '}and{' '}
           <a href="https://linkedin.com/in/sheldonblewis" target="_blank" rel="noopener noreferrer">linkedin</a>
