@@ -532,6 +532,10 @@ p {
   color: var(--color-text-tertiary);
 }
 
+.future-project {
+  margin-top: 0.75rem;
+}
+
 /* empty state */
 .empty-state {
   color: var(--color-text-tertiary);

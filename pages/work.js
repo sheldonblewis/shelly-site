@@ -33,6 +33,10 @@ export default function Work() {
           <a href="/veena" className="subtle-link">
             read more →
           </a>
+          <span className="future-project">agentic personal assistant</span>
+          <span className="subtle-link">
+            unified LLM interface for admin & task management — visualizes and sources from Notes, Messages, work/school/personal email, open PRs, Google Calendar, and Google Tasks. call it whenever an idea, thought, takeaway, deadline, or question comes up; it auto-classifies and updates my data representation
+          </span>
         </div>
       </Section>
 
