@@ -7,19 +7,19 @@ const contact = [
     external: false,
   },
   {
-    label: 'email',
+    label: 'school email',
     href: 'mailto:sheldon.lewis@uwaterloo.ca',
     text: 'sheldon.lewis@uwaterloo.ca',
     external: false,
   },
   {
-    label: 'email',
+    label: 'personal email',
     href: 'mailto:sheldonblewis@gmail.com',
     text: 'sheldonblewis@gmail.com',
     external: false,
   },
   {
-    label: 'email',
+    label: 'theory email',
     href: 'mailto:slewis@theoryvc.com',
     text: 'slewis@theoryvc.com',
     external: false,
@@ -27,7 +27,7 @@ const contact = [
   {
     label: 'linkedin',
     href: 'https://linkedin.com/in/sheldonblewis',
-    text: 'sheldonblewis',
+    text: 'Sheldon Lewis',
     external: true,
   },
   {
