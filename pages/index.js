@@ -44,7 +44,7 @@ export default function Home() {
 
       <div className="section">
         <p style={{ marginBottom: '0.75rem' }}>
-          this site is under construction as of may 8, 2026. it will be done by next week, may 15, 2026.
+          this site is under construction as of july 16, 2026. it will be done by next week, july 23, 2026.
         </p>
         <p>
           feel free to check these out in the meantime, i think they represent me pretty well :){' '}

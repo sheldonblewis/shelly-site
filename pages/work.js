@@ -15,7 +15,9 @@ export default function Work() {
             work.map((item, i) => (
               <div key={i} className="work-item">
                 <div className="work-item-header">
-                  <span className="work-item-title">{item.title}</span>
+                  <span className="work-item-title">
+                    {item.href ? <a href={item.href}>{item.title}</a> : item.title}
+                  </span>
                   <span className="work-item-date">{item.date}</span>
                 </div>
                 <p className="work-item-description">{item.description}</p>
@@ -27,12 +29,6 @@ export default function Work() {
 
       <Section title="future">
         <div className="future-links">
-          <a href="https://veena.one" target="_blank" rel="noopener noreferrer">
-            veena.one
-          </a>
-          <a href="/veena" className="subtle-link">
-            read more →
-          </a>
           <span className="future-project">agentic personal assistant</span>
           <span className="subtle-link">
             unified LLM interface for admin & task management — visualizes and sources from Notes, Messages, work/school/personal email, open PRs, Google Calendar, and Google Tasks. call it whenever an idea, thought, takeaway, deadline, or question comes up; it auto-classifies and updates my data representation
