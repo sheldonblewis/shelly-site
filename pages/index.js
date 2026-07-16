@@ -24,8 +24,8 @@ export default function Home() {
 
         <p style={{ marginBottom: '0.75rem' }}>
           hey, i'm sheldon! currently studying computer science at the university of waterloo, and working at{' '}
-          <a href="https://theory.ventures" target="_blank" rel="noopener noreferrer">
-            theory ventures
+          <a href="https://www.worldlabs.ai" target="_blank" rel="noopener noreferrer">
+            world labs
           </a>
           .
         </p>
