@@ -20,8 +20,8 @@ const contact = [
   },
   {
     label: 'work',
-    href: 'mailto:slewis@theoryvc.com',
-    text: 'slewis@theoryvc.com',
+    href: 'mailto:sheldon@worldlabs.ai',
+    text: 'sheldon@worldlabs.ai',
     external: false,
   },
   {
