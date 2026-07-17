@@ -27,15 +27,6 @@ export default function Work() {
         </div>
       </div>
 
-      <Section title="future">
-        <div className="future-links">
-          <span className="future-project">agentic personal assistant</span>
-          <span className="subtle-link">
-            unified LLM interface for admin & task management — visualizes and sources from Notes, Messages, work/school/personal email, open PRs, Google Calendar, and Google Tasks. call it whenever an idea, thought, takeaway, deadline, or question comes up; it auto-classifies and updates my data representation
-          </span>
-        </div>
-      </Section>
-
       <div className="section">
         <a href="/resume.pdf" download className="download-btn">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

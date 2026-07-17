@@ -519,23 +519,6 @@ p {
   text-decoration: none;
 }
 
-/* future links */
-.future-links {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.subtle-link {
-  font-size: 0.813rem;
-  color: var(--color-text-tertiary);
-}
-
-.future-project {
-  margin-top: 0.75rem;
-}
-
 /* empty state */
 .empty-state {
   color: var(--color-text-tertiary);
