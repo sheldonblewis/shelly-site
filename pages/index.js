@@ -49,9 +49,9 @@ export default function Home() {
         <p>
           feel free to check these out in the meantime, i think they represent me pretty well :){' '}
           <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">polarsteps</a>
-          {', '}
+          {' '}
           <a href="https://linkedin.com/in/sheldonblewis" target="_blank" rel="noopener noreferrer">linkedin</a>
-          {', and '}
+          {' '}
           <a href="https://instagram.com/_sheldonlewis" target="_blank" rel="noopener noreferrer">instagram</a>
         </p>
       </div>
