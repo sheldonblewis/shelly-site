@@ -5,8 +5,33 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/me',
+        destination: '/#top',
+        permanent: true,
+      },
+      {
+        source: '/work',
+        destination: '/#work',
+        permanent: true,
+      },
+      {
+        source: '/adventures',
+        destination: '/#adventures',
+        permanent: true,
+      },
+      {
         source: '/places',
-        destination: '/adventures',
+        destination: '/#adventures',
+        permanent: true,
+      },
+      {
+        source: '/thoughts',
+        destination: '/#thoughts',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        destination: '/#contact',
         permanent: true,
       },
     ]

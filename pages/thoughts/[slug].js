@@ -22,7 +22,7 @@ export default function ThoughtPost({ thought }) {
     <>
       <PageMeta title={thought.frontmatter.title} />
 
-      <BackLink href="/thoughts">my thoughts</BackLink>
+      <BackLink href="/#thoughts">my thoughts</BackLink>
 
       <div className="section">
         <div className="thought-date" style={{ marginBottom: '0.5rem' }}>

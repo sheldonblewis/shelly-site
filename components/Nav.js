@@ -1,30 +1,25 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 const links = [
-  { href: '/', label: 'home' },
-  { href: '/me', label: 'me' },
-  { href: '/work', label: 'my work' },
-  { href: '/adventures', label: 'my adventures' },
-  { href: '/thoughts', label: 'my thoughts' },
-  { href: '/contact', label: 'contact me' },
+  { href: '/#work', label: 'my work' },
+  { href: '/#adventures', label: 'my adventures' },
+  { href: '/#thoughts', label: 'my thoughts' },
+  { href: '/#contact', label: 'contact me' },
 ]
 
 export default function Nav() {
-  const router = useRouter()
-
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <Link href="/" className="nav-logo">
+        <Link href="/#top" className="nav-logo">
           sheldon lewis
         </Link>
         <div className="nav-links">
-          {links.slice(1).map(({ href, label }) => (
+          {links.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`nav-link ${router.pathname === href ? 'active' : ''}`}
+              className="nav-link"
             >
               {label}
             </Link>

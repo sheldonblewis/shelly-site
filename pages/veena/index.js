@@ -13,7 +13,7 @@ export default function Veena({ veena }) {
     <>
       <PageMeta title="veena" />
 
-      <BackLink href="/work">my work</BackLink>
+      <BackLink href="/#work">my work</BackLink>
 
       <div className="section">
         <h1 style={{ marginBottom: '3rem' }}>veena</h1>
