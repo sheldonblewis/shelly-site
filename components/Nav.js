@@ -11,7 +11,7 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <Link href="/#top" className="nav-logo">
+        <Link href="/" className="nav-logo">
           sheldon lewis
         </Link>
         <div className="nav-links">
