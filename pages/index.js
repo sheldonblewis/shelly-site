@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import PageMeta from '@/components/PageMeta'
 import Section from '@/components/Section'
 import work from '@/data/work'
@@ -14,6 +14,7 @@ export async function getStaticProps() {
 
 export default function Home({ thoughts }) {
   const [location, setLocation] = useState(null)
+  const workCarouselRef = useRef(null)
 
   useEffect(() => {
     fetch('/api/location')
@@ -23,6 +24,19 @@ export default function Home({ thoughts }) {
       })
       .catch(() => {})
   }, [])
+
+  const scrollWork = (direction) => {
+    const carousel = workCarouselRef.current
+    if (!carousel) return
+    const firstCard = carousel.firstElementChild
+    const gap = parseFloat(window.getComputedStyle(carousel).columnGap) || 0
+    const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : carousel.clientWidth
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    carousel.scrollBy({
+      left: direction * (cardWidth + gap),
+      behavior: reduceMotion ? 'auto' : 'smooth',
+    })
+  }
 
   return (
     <>
@@ -55,44 +69,60 @@ export default function Home({ thoughts }) {
         </div>
       </div>
 
-      <nav className="section home-social-links" aria-label="social links">
-        <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">polarsteps</a>
-        <a href="https://linkedin.com/in/sheldonblewis" target="_blank" rel="noopener noreferrer">linkedin</a>
-        <a href="https://instagram.com/_sheldonlewis" target="_blank" rel="noopener noreferrer">instagram</a>
-      </nav>
-
       <Section id="work" title="my work">
-        <div className="work-list">
-          {work.map((item) => (
-            <div key={item.title} className="work-item">
-              <div className="work-item-header">
-                <span className="work-item-title">
-                  {item.href ? <Link href={item.href}>{item.title}</Link> : item.title}
-                </span>
-                <span className="work-item-date">{item.date}</span>
-              </div>
-              <p className="work-item-description">{item.description}</p>
+        <div className="work-carousel">
+          <div className="work-carousel-header">
+            <p className="work-carousel-hint">scroll through positions</p>
+            <div className="work-carousel-controls" role="group" aria-label="work carousel controls">
+              <button type="button" onClick={() => scrollWork(-1)} aria-label="previous work positions">←</button>
+              <button type="button" onClick={() => scrollWork(1)} aria-label="next work positions">→</button>
             </div>
-          ))}
+          </div>
+
+          <ul className="work-carousel-track" ref={workCarouselRef} tabIndex={0} aria-label="work positions">
+            {work.map((item, index) => {
+              const card = (
+                <>
+                  <span className="work-card-meta">
+                    <span className="work-card-index">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="work-card-date">{item.date}</span>
+                  </span>
+                  <span className="work-card-content">
+                    <span className="work-card-title">{item.title}</span>
+                    <span className="work-card-role">{item.role}</span>
+                  </span>
+                </>
+              )
+
+              return (
+                <li key={item.id} className={`work-card-shell${item.placeholder ? ' placeholder' : ''}`}>
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      className="work-card"
+                      {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    >
+                      {card}
+                    </Link>
+                  ) : (
+                    <div className="work-card">{card}</div>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
         </div>
 
-        <h3 className="section-subheader">resume</h3>
-        <figure className="resume-preview">
-          <img
-            src="/resume-preview.png"
-            alt="Sheldon Lewis technical resume"
-            width="1530"
-            height="1980"
-          />
-          <a href="/resume.pdf" download className="download-btn resume-download">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
+        <div className="resume-peek">
+          <div className="resume-hover-preview" aria-hidden="true">
+            <img src="/resume-preview.png" alt="" width="1530" height="1980" loading="lazy" />
+          </div>
+          <a href="/resume.pdf" download className="download-btn resume-link">
+            <span aria-hidden="true">↓</span>
             download resume
           </a>
-        </figure>
+          <span className="resume-hover-hint">hover to preview</span>
+        </div>
       </Section>
 
       <Section id="adventures" title="my adventures" subtitle="places and adventures that mean something to me">
@@ -121,38 +151,50 @@ export default function Home({ thoughts }) {
 
       <Section id="thoughts" title="my thoughts">
         <div className="thoughts-list">
-          {thoughts.length > 0 ? (
-            thoughts.map((thought) => (
-              <Link
-                key={thought.slug}
-                href={`/thoughts/${thought.slug}`}
-                className="thought-item"
-              >
-                <div className="thought-date">{thought.date}</div>
-                <div className="thought-title">{thought.title}</div>
-                <p className="thought-preview">{thought.preview}</p>
-              </Link>
-            ))
-          ) : (
-            <p className="empty-state">nothing here yet.</p>
-          )}
+          {thoughts.map((thought) => (
+            <Link
+              key={thought.slug}
+              href={`/thoughts/${thought.slug}`}
+              className="thought-item"
+            >
+              <div className="thought-date">{thought.date}</div>
+              <div className="thought-title">{thought.title}</div>
+              <p className="thought-preview">{thought.preview}</p>
+            </Link>
+          ))}
+
+          <Link href="/veena" className="thought-item">
+            <div className="thought-date">2025 — present</div>
+            <div className="thought-title">veena</div>
+            <p className="thought-preview">
+              your access point to the world's technology — an AI brain that builds a complete context model of an organization and helps it operate.
+            </p>
+          </Link>
         </div>
       </Section>
 
       <Section id="contact" title="contact me">
-        <div className="contact-links">
-          {contact.map((item) => (
-            <div key={item.label} className="contact-link">
-              <span className="contact-link-label">{item.label}</span>
-              <a
-                href={item.href}
-                {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-              >
-                {item.text}
-              </a>
+        <div className="contact-compact">
+          <div className="contact-compact-row">
+            <span className="contact-icon" aria-hidden="true">☎</span>
+            <a href={contact.phone.href}>{contact.phone.text}</a>
+          </div>
+          <div className="contact-compact-row">
+            <span className="contact-icon" aria-hidden="true">✉</span>
+            <div className="contact-email-links">
+              {contact.emails.map((email) => (
+                <a key={email.href} href={email.href}>{email.text}</a>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
+
+        <nav className="contact-social-links" aria-label="social links">
+          <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">polarsteps</a>
+          <a href="https://linkedin.com/in/sheldonblewis" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="https://github.com/sheldonblewis" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://instagram.com/_sheldonlewis" target="_blank" rel="noopener noreferrer">instagram</a>
+        </nav>
       </Section>
     </>
   )
