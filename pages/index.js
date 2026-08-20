@@ -35,7 +35,7 @@ export default function Home({ thoughts }) {
             <a href="https://www.worldlabs.ai" target="_blank" rel="noopener noreferrer">
               world labs
             </a>
-            , working on pre-training. i also study computer science at the university of waterloo.
+            , on the pre-training team. i also study computer science at the university of waterloo.
           </p>
 
           <div className="location-badge">
