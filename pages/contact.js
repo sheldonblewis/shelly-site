@@ -5,11 +5,9 @@ import contact from '@/data/contact'
 export default function Contact() {
   return (
     <>
-      <PageMeta title="contact" />
+      <PageMeta title="contact me" />
 
-      <Section title="contact" />
-
-      <div className="section">
+      <Section title="contact me">
         <div className="contact-links">
           {contact.length > 0 ? (
             contact.map((item, i) => (
@@ -27,7 +25,7 @@ export default function Contact() {
             <p className="empty-state">nothing here yet.</p>
           )}
         </div>
-      </div>
+      </Section>
     </>
   )
 }

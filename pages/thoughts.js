@@ -11,9 +11,9 @@ export async function getStaticProps() {
 export default function Thoughts({ thoughts }) {
   return (
     <>
-      <PageMeta title="thoughts" />
+      <PageMeta title="my thoughts" />
 
-      <Section title="thoughts" />
+      <Section title="my thoughts" />
 
       <div className="section">
         <div className="thoughts-list">

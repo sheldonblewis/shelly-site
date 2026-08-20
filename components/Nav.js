@@ -5,10 +5,9 @@ const links = [
   { href: '/', label: 'home' },
   { href: '/me', label: 'me' },
   { href: '/work', label: 'my work' },
-  { href: '/places', label: 'places' },
-  { href: '/adventures', label: 'adventures' },
-  { href: '/thoughts', label: 'thoughts' },
-  { href: '/contact', label: 'contact' },
+  { href: '/adventures', label: 'my adventures' },
+  { href: '/thoughts', label: 'my thoughts' },
+  { href: '/contact', label: 'contact me' },
 ]
 
 export default function Nav() {

@@ -28,14 +28,14 @@ export default function Home() {
           </p>
 
           <div className="location-badge">
-            <span className="location-dot" />
+            <span className="location-dot" aria-hidden="true" />
             <span>
-              {location ? `currently in ${location}` : 'currently in sf'}
+              {`i'm currently in ${location || 'sf'}. (`}
+              <a href="https://cal.com/sheldonblewis" className="coffee-link" target="_blank" rel="noopener noreferrer">
+                get coffee with me
+              </a>
+              {')!'}
             </span>
-            <span style={{ color: 'var(--color-text-tertiary)' }}>·</span>
-            <a href="https://cal.com/sheldonblewis" className="coffee-link" target="_blank" rel="noopener noreferrer">
-              get a coffee with me!
-            </a>
           </div>
         </div>
 

@@ -5,9 +5,9 @@ import adventures from '@/data/adventures'
 export default function Adventures() {
   return (
     <>
-      <PageMeta title="adventures" />
+      <PageMeta title="my adventures" />
 
-      <Section title="adventures" />
+      <Section title="my adventures" subtitle="places and adventures that mean something to me" />
 
       <div className="section">
         <p>
