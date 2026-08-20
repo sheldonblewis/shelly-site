@@ -18,10 +18,6 @@ export default function Home() {
       <PageMeta />
 
       <div className="section">
-        <h1 style={{ marginBottom: '1.5rem' }}>
-          a creative representation of work i've done, meaningful experiences, core learnings, and more.
-        </h1>
-
         <p style={{ marginBottom: '0.75rem' }}>
           hey, i'm sheldon! currently studying computer science at the university of waterloo, and working at{' '}
           <a href="https://www.worldlabs.ai" target="_blank" rel="noopener noreferrer">
