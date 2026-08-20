@@ -19,11 +19,11 @@ export default function Home() {
 
       <div className="section">
         <p style={{ marginBottom: '0.75rem' }}>
-          hey, i'm sheldon! currently studying computer science at the university of waterloo, and working at{' '}
+          hey, i'm sheldon! i'm currently a research intern at{' '}
           <a href="https://www.worldlabs.ai" target="_blank" rel="noopener noreferrer">
             world labs
           </a>
-          .
+          , working on pre-training. i also study computer science at the university of waterloo.
         </p>
 
         <div className="location-badge">
