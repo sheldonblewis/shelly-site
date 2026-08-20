@@ -17,40 +17,38 @@ export default function Home() {
     <>
       <PageMeta />
 
-      <div className="section">
-        <p style={{ marginBottom: '0.75rem' }}>
-          hey, i'm sheldon! i'm currently a research intern at{' '}
-          <a href="https://www.worldlabs.ai" target="_blank" rel="noopener noreferrer">
-            world labs
-          </a>
-          , working on pre-training. i also study computer science at the university of waterloo.
-        </p>
+      <div className="section home-intro">
+        <div className="home-intro-copy">
+          <p style={{ marginBottom: '0.75rem' }}>
+            hey, i'm sheldon! i'm currently a research intern at{' '}
+            <a href="https://www.worldlabs.ai" target="_blank" rel="noopener noreferrer">
+              world labs
+            </a>
+            , working on pre-training. i also study computer science at the university of waterloo.
+          </p>
 
-        <div className="location-badge">
-          <span className="location-dot" />
-          <span>
-            {location ? `currently in ${location}` : 'currently in sf'}
-          </span>
-          <span style={{ color: 'var(--color-text-tertiary)' }}>·</span>
-          <a href="https://cal.com/sheldonblewis" className="coffee-link" target="_blank" rel="noopener noreferrer">
-            get a coffee with me!
-          </a>
+          <div className="location-badge">
+            <span className="location-dot" />
+            <span>
+              {location ? `currently in ${location}` : 'currently in sf'}
+            </span>
+            <span style={{ color: 'var(--color-text-tertiary)' }}>·</span>
+            <a href="https://cal.com/sheldonblewis" className="coffee-link" target="_blank" rel="noopener noreferrer">
+              get a coffee with me!
+            </a>
+          </div>
+        </div>
+
+        <div className="home-headshot">
+          <img src="/headshot.jpg" alt="sheldon lewis" width="1312" height="1312" />
         </div>
       </div>
 
-      <div className="section">
-        <p style={{ marginBottom: '0.75rem' }}>
-          this site is under construction as of july 16, 2026. it will be done by next week, july 23, 2026.
-        </p>
-        <p>
-          feel free to check these out in the meantime, i think they represent me pretty well :){' '}
-          <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">polarsteps</a>
-          {' '}
-          <a href="https://linkedin.com/in/sheldonblewis" target="_blank" rel="noopener noreferrer">linkedin</a>
-          {' '}
-          <a href="https://instagram.com/_sheldonlewis" target="_blank" rel="noopener noreferrer">instagram</a>
-        </p>
-      </div>
+      <nav className="section home-social-links" aria-label="social links">
+        <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">polarsteps</a>
+        <a href="https://linkedin.com/in/sheldonblewis" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a href="https://instagram.com/_sheldonlewis" target="_blank" rel="noopener noreferrer">instagram</a>
+      </nav>
     </>
   )
 }
