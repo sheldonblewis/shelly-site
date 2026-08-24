@@ -16,7 +16,7 @@ const work = [
   },
   {
     id: 'amazon-robotics',
-    title: 'amazon robotics',
+    title: 'amazon',
     role: 'engineering intern',
     date: '2025',
   },
