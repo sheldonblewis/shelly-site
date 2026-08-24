@@ -20,7 +20,7 @@
 
 export default function handler(req, res) {
   // replace with dynamic location fetching
-  const location = 'sf'
+  const location = 'toronto'
 
   res.status(200).json({
     location,
