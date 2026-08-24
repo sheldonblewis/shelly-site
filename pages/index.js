@@ -136,7 +136,7 @@ export default function Home({ thoughts }) {
             {resumeButtonHovered ? (
               <>
                 <span aria-hidden="true">↓</span>
-                download resume immediately
+                download resume
               </>
             ) : (
               'view resume'
