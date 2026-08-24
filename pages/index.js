@@ -55,11 +55,14 @@ export default function Home({ thoughts }) {
           <div className="location-badge">
             <span className="location-dot" aria-hidden="true" />
             <span>
-              {`i'm currently in ${location || 'sf'}. `}
+              {`i'm currently in ${location || 'toronto'}. `}
               <a href="https://cal.com/sheldonblewis" className="coffee-link" target="_blank" rel="noopener noreferrer">
-                get a coffee with me
+                book a coffee with me!
               </a>
-              {'!'}
+              {' '}
+              <a href="https://calendly.com/sheldonblewis/15-minute-meeting" target="_blank" rel="noopener noreferrer">
+                (or a call)
+              </a>
             </span>
           </div>
         </div>
