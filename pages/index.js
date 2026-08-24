@@ -26,6 +26,18 @@ export default function Home({ thoughts }) {
       .catch(() => {})
   }, [])
 
+  useEffect(() => () => window.clearTimeout(resumeReadyTimer.current), [])
+
+  const beginResumePreview = () => {
+    window.clearTimeout(resumeReadyTimer.current)
+    setResumeReady(false)
+    resumeReadyTimer.current = window.setTimeout(() => setResumeReady(true), 220)
+  }
+
+  const endResumePreview = () => {
+    window.clearTimeout(resumeReadyTimer.current)
+    setResumeReady(false)
+  }
 
   return (
     <>
