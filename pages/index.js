@@ -16,6 +16,7 @@ export default function Home({ thoughts }) {
   const [location, setLocation] = useState(null)
   const [resumeReady, setResumeReady] = useState(false)
   const [resumeButtonHovered, setResumeButtonHovered] = useState(false)
+  const [workCarouselAtEnd, setWorkCarouselAtEnd] = useState(false)
   const resumeReadyTimer = useRef(null)
 
   useEffect(() => {
@@ -39,6 +40,11 @@ export default function Home({ thoughts }) {
     window.clearTimeout(resumeReadyTimer.current)
     setResumeReady(false)
     setResumeButtonHovered(false)
+  }
+
+  const updateWorkCarouselFade = (event) => {
+    const { scrollLeft, scrollWidth, clientWidth } = event.currentTarget
+    setWorkCarouselAtEnd(scrollLeft >= scrollWidth - clientWidth - 2)
   }
 
   return (
@@ -72,8 +78,8 @@ export default function Home({ thoughts }) {
       </div>
 
       <Section id="work" title="my work">
-        <div className="work-carousel">
-          <ul className="work-carousel-track" tabIndex={0} aria-label="work positions">
+        <div className={`work-carousel${workCarouselAtEnd ? ' work-carousel-at-end' : ''}`}>
+          <ul className="work-carousel-track" onScroll={updateWorkCarouselFade} tabIndex={0} aria-label="work positions">
             {work.map((item, index) => {
               const card = (
                 <>
