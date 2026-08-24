@@ -684,23 +684,24 @@ a.work-card:focus-visible {
 /* resume */
 .resume-peek {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
   z-index: 20;
 }
 
 .download-btn {
-  width: 168px;
+  width: 144px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 10px 20px;
+  gap: 6px;
+  padding: 8px 12px;
   border: 1px solid var(--color-border);
   border-radius: 6px;
-  font-size: 0.813rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
   color: var(--color-text-secondary);
   text-decoration: none;
   transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
@@ -725,8 +726,8 @@ a.work-card:focus-visible {
 
 .resume-hover-preview {
   position: absolute;
-  left: 0;
-  bottom: calc(100% + 14px);
+  right: 0;
+  bottom: calc(100% + 10px);
   width: min(280px, calc(100vw - (2 * var(--page-padding))));
   overflow: hidden;
   border: 1px solid var(--color-border);
@@ -736,8 +737,8 @@ a.work-card:focus-visible {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(10px) rotate(-1deg);
-  transform-origin: bottom left;
+  transform: translateY(8px);
+  transform-origin: bottom right;
   transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 }
 
@@ -750,7 +751,7 @@ a.work-card:focus-visible {
 .resume-peek:focus-within .resume-hover-preview {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0) rotate(-1deg);
+  transform: translateY(0);
 }
 
 /* empty state */
