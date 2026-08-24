@@ -339,44 +339,19 @@ p {
 }
 
 /* work carousel */
-.work-carousel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
+.work-carousel {
+  position: relative;
 }
 
-.work-carousel-hint {
-  font-size: 0.75rem;
-  color: var(--color-text-tertiary);
-}
-
-.work-carousel-controls {
-  display: flex;
-  gap: 6px;
-}
-
-.work-carousel-controls button {
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-  background: transparent;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  font: inherit;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.work-carousel-controls button:hover {
-  background-color: var(--color-hover);
-  border-color: var(--color-text-tertiary);
-  color: var(--color-text);
-}
-
-.work-carousel-controls button:focus-visible {
-  outline: 2px solid var(--color-text);
-  outline-offset: 2px;
+.work-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 16px;
+  width: 72px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(250, 250, 248, 0), var(--color-bg));
 }
 
 .work-carousel-track {
