@@ -60,7 +60,7 @@ export default function Home({ thoughts }) {
             <span>
               {`i'm currently in ${location || 'toronto'}. `}
               <a href="https://cal.com/sheldonblewis" className="coffee-link" target="_blank" rel="noopener noreferrer">
-                get coffee with me
+                get coffee with me!
               </a>
             </span>
           </div>
