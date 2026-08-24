@@ -352,6 +352,11 @@ p {
   width: 72px;
   pointer-events: none;
   background: linear-gradient(90deg, rgba(250, 250, 248, 0), var(--color-bg));
+  transition: opacity 0.15s ease;
+}
+
+.work-carousel.work-carousel-at-end::after {
+  opacity: 0;
 }
 
 .work-carousel-track {
