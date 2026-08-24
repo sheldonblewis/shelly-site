@@ -564,9 +564,15 @@ a.work-card:focus-visible {
 }
 
 .contact-icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.35rem;
   color: var(--color-text-tertiary);
-  text-align: center;
-  line-height: 1.75;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .contact-email-links {
