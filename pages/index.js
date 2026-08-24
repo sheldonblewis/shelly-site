@@ -15,6 +15,7 @@ export async function getStaticProps() {
 export default function Home({ thoughts }) {
   const [location, setLocation] = useState(null)
   const [resumeReady, setResumeReady] = useState(false)
+  const [resumeButtonHovered, setResumeButtonHovered] = useState(false)
   const resumeReadyTimer = useRef(null)
 
   useEffect(() => {
@@ -37,6 +38,7 @@ export default function Home({ thoughts }) {
   const endResumePreview = () => {
     window.clearTimeout(resumeReadyTimer.current)
     setResumeReady(false)
+    setResumeButtonHovered(false)
   }
 
   return (
@@ -125,20 +127,21 @@ export default function Home({ thoughts }) {
             className="download-btn resume-link"
             aria-disabled={!resumeReady}
             tabIndex={resumeReady ? 0 : -1}
+            onMouseEnter={() => setResumeButtonHovered(true)}
+            onMouseLeave={() => setResumeButtonHovered(false)}
             onClick={(event) => {
               if (!resumeReady) event.preventDefault()
             }}
           >
-            {resumeReady ? (
+            {resumeButtonHovered ? (
               <>
                 <span aria-hidden="true">↓</span>
-                download resume
+                download resume immediately
               </>
             ) : (
               'view resume'
             )}
           </a>
-          <span className="resume-hover-hint">hover to preview</span>
         </div>
       </Section>
 
