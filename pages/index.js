@@ -184,7 +184,7 @@ export default function Home({ thoughts }) {
           ))}
 
           <Link href="/veena" className="thought-item veena-thought-item">
-            <div className="thought-date">2025</div>
+            <div className="thought-date">sep 29, 2025</div>
             <div className="thought-title">veena</div>
             <p className="thought-preview">
               your access point to the world's technology — an AI brain that builds a complete context model of an organization and helps it operate.
