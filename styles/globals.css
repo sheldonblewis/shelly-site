@@ -490,9 +490,14 @@ a.work-card:focus-visible {
 }
 
 /* thoughts / blog */
-.thoughts-list {
+#thoughts {
+  margin-bottom: 1.25rem;
+}
+
+#thoughts .thoughts-list {
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 .thought-item {
