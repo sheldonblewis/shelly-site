@@ -35,7 +35,7 @@ const work = [
   {
     id: 'electric-mind',
     title: 'electric mind',
-    role: 'associate consultant intern',
+    role: 'consulting intern',
     date: '2024',
   },
   {
