@@ -173,11 +173,11 @@ export default function Home({ thoughts }) {
 
       <Section id="thoughts" title="my thoughts">
         <div className="thoughts-list">
-          {thoughts.map((thought) => (
+          {thoughts.map((thought, index) => (
             <Link
               key={thought.slug}
               href={`/thoughts/${thought.slug}`}
-              className="thought-item"
+              className={`thought-item${index === thoughts.length - 1 ? ' thought-item-before-veena' : ''}`}
             >
               <div className="thought-date">{thought.date}</div>
               <div className="thought-title">{thought.title}</div>
@@ -185,8 +185,8 @@ export default function Home({ thoughts }) {
             </Link>
           ))}
 
-          <Link href="/veena" className="thought-item">
-            <div className="thought-date">2025 — present</div>
+          <Link href="/veena" className="thought-item veena-thought-item">
+            <div className="thought-date">2025</div>
             <div className="thought-title">veena</div>
             <p className="thought-preview">
               your access point to the world's technology — an AI brain that builds a complete context model of an organization and helps it operate.
