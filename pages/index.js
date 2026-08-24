@@ -69,6 +69,13 @@ export default function Home({ thoughts }) {
                     <span className="work-card-index">{String(index + 1).padStart(2, '0')}</span>
                     <span className="work-card-date">{item.date}</span>
                   </span>
+                  <span
+                    className="work-card-mark"
+                    style={{ '--work-card-accent': item.accent }}
+                    aria-hidden="true"
+                  >
+                    {item.mark}
+                  </span>
                   <span className="work-card-content">
                     <span className="work-card-title">{item.title}</span>
                     <span className="work-card-role">{item.role}</span>
