@@ -737,7 +737,7 @@ a.work-card:focus-visible {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(8px);
+  transform: translateY(10px) rotate(-1deg);
   transform-origin: bottom right;
   transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 }
@@ -751,7 +751,7 @@ a.work-card:focus-visible {
 .resume-peek:focus-within .resume-hover-preview {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) rotate(-1deg);
 }
 
 /* empty state */
