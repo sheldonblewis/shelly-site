@@ -604,21 +604,19 @@ a.work-card:focus-visible {
   50% { opacity: 0.4; }
 }
 
-.coffee-link {
-  display: inline-block;
-  font-size: 0.813rem;
+.subtle-link {
   color: var(--color-text-secondary);
-  transition: color 0.2s ease, transform 0.2s ease, text-decoration-color 0.2s ease;
+  text-decoration-color: var(--color-text-tertiary);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
-.coffee-link:hover,
-.coffee-link:focus-visible {
+.subtle-link:hover,
+.subtle-link:focus-visible {
   color: var(--color-text);
-  transform: translateY(-2px);
   text-decoration-color: var(--color-text);
 }
 
-.coffee-link:focus-visible {
+.subtle-link:focus-visible {
   outline: 1px solid var(--color-text);
   outline-offset: 3px;
 }
