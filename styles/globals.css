@@ -675,14 +675,6 @@ a.work-card:focus-visible {
   transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.resume-link {
-  pointer-events: none;
-}
-
-.resume-peek.resume-ready .resume-link {
-  pointer-events: auto;
-}
-
 .resume-link:hover,
 .resume-link:focus-visible {
   border-color: var(--color-text-tertiary);
