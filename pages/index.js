@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import PageMeta from '@/components/PageMeta'
 import Section from '@/components/Section'
 import work from '@/data/work'
@@ -14,7 +14,6 @@ export async function getStaticProps() {
 
 export default function Home({ thoughts }) {
   const [location, setLocation] = useState(null)
-  const workCarouselRef = useRef(null)
 
   useEffect(() => {
     fetch('/api/location')
@@ -25,18 +24,6 @@ export default function Home({ thoughts }) {
       .catch(() => {})
   }, [])
 
-  const scrollWork = (direction) => {
-    const carousel = workCarouselRef.current
-    if (!carousel) return
-    const firstCard = carousel.firstElementChild
-    const gap = parseFloat(window.getComputedStyle(carousel).columnGap) || 0
-    const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : carousel.clientWidth
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    carousel.scrollBy({
-      left: direction * (cardWidth + gap),
-      behavior: reduceMotion ? 'auto' : 'smooth',
-    })
-  }
 
   return (
     <>
@@ -74,15 +61,7 @@ export default function Home({ thoughts }) {
 
       <Section id="work" title="my work">
         <div className="work-carousel">
-          <div className="work-carousel-header">
-            <p className="work-carousel-hint">scroll through positions</p>
-            <div className="work-carousel-controls" role="group" aria-label="work carousel controls">
-              <button type="button" onClick={() => scrollWork(-1)} aria-label="previous work positions">←</button>
-              <button type="button" onClick={() => scrollWork(1)} aria-label="next work positions">→</button>
-            </div>
-          </div>
-
-          <ul className="work-carousel-track" ref={workCarouselRef} tabIndex={0} aria-label="work positions">
+          <ul className="work-carousel-track" tabIndex={0} aria-label="work positions">
             {work.map((item, index) => {
               const card = (
                 <>
