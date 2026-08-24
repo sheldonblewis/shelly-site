@@ -12,10 +12,6 @@ const contact = {
       href: 'mailto:sheldonblewis@gmail.com',
       text: 'sheldonblewis@gmail.com',
     },
-    {
-      href: 'mailto:sheldon@worldlabs.ai',
-      text: 'sheldon@worldlabs.ai',
-    },
   ],
 }
 
