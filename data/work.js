@@ -3,7 +3,7 @@ const work = [
   {
     id: 'world-labs',
     title: 'world labs',
-    role: 'research engineer intern · pre-training',
+    role: 'research intern',
     date: '2026',
     href: 'https://www.worldlabs.ai',
     external: true,
@@ -13,7 +13,7 @@ const work = [
   {
     id: 'theory-ventures',
     title: 'theory ventures',
-    role: 'engineering intern · applied ai',
+    role: 'engineering intern',
     date: '2026',
     mark: '◌',
     accent: '#a15d47',
@@ -21,7 +21,7 @@ const work = [
   {
     id: 'amazon-robotics',
     title: 'amazon robotics',
-    role: 'software development engineer intern',
+    role: 'engineering intern',
     date: '2025',
     mark: '⌁',
     accent: '#b86b27',
@@ -29,18 +29,10 @@ const work = [
   {
     id: 'openai',
     title: 'openai',
-    role: 'engineering analyst · model evaluation',
+    role: 'interpretability analyst',
     date: '2025',
     mark: '◎',
     accent: '#26735f',
-  },
-  {
-    id: 'mercor',
-    title: 'mercor',
-    role: 'ai interpretability & evaluation lead',
-    date: '2025',
-    mark: '↗',
-    accent: '#356f97',
   },
   {
     id: 'diligent',
