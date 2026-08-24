@@ -49,7 +49,7 @@ export default function Home({ thoughts }) {
         <div className="home-intro-copy">
           <p style={{ marginBottom: '0.75rem' }}>
             hey, i'm sheldon! i'm currently a research intern at{' '}
-            <a href="https://www.worldlabs.ai" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.worldlabs.ai" className="subtle-link" target="_blank" rel="noopener noreferrer">
               world labs
             </a>
             , on the pre-training team. i also study computer science at the university of waterloo.
@@ -59,7 +59,7 @@ export default function Home({ thoughts }) {
             <span className="location-dot" aria-hidden="true" />
             <span>
               {`i'm currently in ${location || 'toronto'}. `}
-              <a href="https://cal.com/sheldonblewis" className="coffee-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://cal.com/sheldonblewis" className="subtle-link" target="_blank" rel="noopener noreferrer">
                 get coffee with me!
               </a>
             </span>
@@ -141,7 +141,7 @@ export default function Home({ thoughts }) {
       <Section id="adventures" title="my adventures" subtitle="places that mean something to me">
         <p>
           check out my{' '}
-          <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">
+          <a href="https://polarsteps.com/sheldonlewis" className="subtle-link" target="_blank" rel="noopener noreferrer">
             polarsteps
           </a>
           {' '}for now — more to come :)
