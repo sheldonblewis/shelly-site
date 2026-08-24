@@ -80,13 +80,6 @@ export default function Home({ thoughts }) {
                   <span className="work-card-meta">
                     <span className="work-card-date">{item.date}</span>
                   </span>
-                  <span
-                    className="work-card-mark"
-                    style={{ '--work-card-accent': item.accent }}
-                    aria-hidden="true"
-                  >
-                    <span className="work-card-mark-glyph">{item.mark}</span>
-                  </span>
                   <span className="work-card-content">
                     <span className="work-card-title">{item.title}</span>
                     <span className="work-card-role">{item.role}</span>
