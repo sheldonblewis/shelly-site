@@ -76,7 +76,6 @@ export default function Home({ thoughts }) {
               const card = (
                 <>
                   <span className="work-card-meta">
-                    <span className="work-card-index">{String(index + 1).padStart(2, '0')}</span>
                     <span className="work-card-date">{item.date}</span>
                   </span>
                   <span
