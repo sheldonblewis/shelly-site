@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import PageMeta from '@/components/PageMeta'
 import Section from '@/components/Section'
 import work from '@/data/work'
@@ -14,6 +14,8 @@ export async function getStaticProps() {
 
 export default function Home({ thoughts }) {
   const [location, setLocation] = useState(null)
+  const [resumeReady, setResumeReady] = useState(false)
+  const resumeReadyTimer = useRef(null)
 
   useEffect(() => {
     fetch('/api/location')
@@ -102,13 +104,32 @@ export default function Home({ thoughts }) {
           </ul>
         </div>
 
-        <div className="resume-peek">
+        <div
+          className={`resume-peek${resumeReady ? ' resume-ready' : ''}`}
+          onMouseEnter={beginResumePreview}
+          onMouseLeave={endResumePreview}
+        >
           <div className="resume-hover-preview" aria-hidden="true">
             <img src="/resume-preview.png" alt="" width="1530" height="1980" loading="lazy" />
           </div>
-          <a href="/resume.pdf" download className="download-btn resume-link">
-            <span aria-hidden="true">↓</span>
-            download resume
+          <a
+            href="/resume.pdf"
+            download
+            className="download-btn resume-link"
+            aria-disabled={!resumeReady}
+            tabIndex={resumeReady ? 0 : -1}
+            onClick={(event) => {
+              if (!resumeReady) event.preventDefault()
+            }}
+          >
+            {resumeReady ? (
+              <>
+                <span aria-hidden="true">↓</span>
+                download resume
+              </>
+            ) : (
+              'view resume'
+            )}
           </a>
           <span className="resume-hover-hint">hover to preview</span>
         </div>
