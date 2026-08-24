@@ -821,8 +821,11 @@ a.work-card:focus-visible {
     animation: none;
   }
 
-  .coffee-link,
+  .subtle-link,
   .work-card,
+  .thought-item,
+  .contact-compact-row a,
+  .contact-social-links a,
   .resume-link,
   .resume-hover-preview {
     transition: none;
