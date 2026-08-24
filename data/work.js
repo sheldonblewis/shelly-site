@@ -29,13 +29,13 @@ const work = [
   {
     id: 'diligent',
     title: 'diligent',
-    role: 'co-founder · engineering',
+    role: 'tech for vc',
     date: '2025',
   },
   {
     id: 'electric-mind',
     title: 'electric mind',
-    role: 'associate consultant intern · product',
+    role: 'associate consultant intern',
     date: '2024',
   },
   {
