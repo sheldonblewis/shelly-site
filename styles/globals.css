@@ -680,8 +680,10 @@ a.work-card:focus-visible {
 }
 
 .download-btn {
+  width: 168px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 10px 20px;
   border: 1px solid var(--color-border);
