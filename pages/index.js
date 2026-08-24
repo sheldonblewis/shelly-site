@@ -186,7 +186,7 @@ export default function Home({ thoughts }) {
             <div className="thought-date">sep 29, 2025</div>
             <div className="thought-title">veena</div>
             <p className="thought-preview">
-              your access point to the world's technology — an AI brain that builds a complete context model of an organization and helps it operate.
+              thoughts on making technology more accessible
             </p>
           </Link>
         </div>
