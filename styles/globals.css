@@ -363,7 +363,6 @@ p {
   overscroll-behavior-inline: contain;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  scroll-snap-type: x proximity;
   scrollbar-width: none;
   list-style: none;
   padding: 4px 2px 16px;
@@ -376,7 +375,6 @@ p {
 
 .work-card-shell {
   aspect-ratio: 1;
-  scroll-snap-align: start;
 }
 
 .work-card {
