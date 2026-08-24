@@ -196,8 +196,8 @@ export default function Home({ thoughts }) {
           </div>
           <div className="contact-compact-row">
             <svg className="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="14" rx="2" />
-              <path d="m3 7 9 6 9-6" />
+              <rect x="3.5" y="5.5" width="17" height="13" rx="1.5" />
+              <path d="m4 7 8 5.75L20 7" />
             </svg>
             <div className="contact-email-links">
               {contact.emails.map((email) => (
