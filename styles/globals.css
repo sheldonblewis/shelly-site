@@ -423,26 +423,6 @@ a.work-card:focus-visible {
   letter-spacing: 0.02em;
 }
 
-.work-card-mark {
-  align-self: flex-start;
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  border: 1px solid color-mix(in srgb, var(--work-card-accent) 42%, var(--color-border));
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--work-card-accent) 12%, var(--color-bg));
-  color: var(--work-card-accent);
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  line-height: 1;
-}
-
-.work-card-mark-glyph {
-  display: block;
-  transform: translateY(2px);
-}
-
 .work-card-content {
   display: flex;
   flex-direction: column;
@@ -670,7 +650,7 @@ a.work-card:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   z-index: 20;
 }
 
