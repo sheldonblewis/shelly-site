@@ -120,10 +120,15 @@ p {
 }
 
 .nav-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-tertiary);
+  font: inherit;
   font-size: 0.813rem;
   text-decoration: none;
-  color: var(--color-text-tertiary);
   white-space: nowrap;
+  cursor: pointer;
   transition: color 0.2s ease;
 }
 
