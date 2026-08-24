@@ -423,6 +423,20 @@ a.work-card:focus-visible {
   letter-spacing: 0.02em;
 }
 
+.work-card-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--work-card-accent) 42%, var(--color-border));
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--work-card-accent) 12%, var(--color-bg));
+  color: var(--work-card-accent);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
 .work-card-content {
   display: flex;
   flex-direction: column;
