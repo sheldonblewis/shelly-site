@@ -147,13 +147,13 @@ export default function Home({ thoughts }) {
         </div>
       </Section>
 
-      <Section id="adventures" title="my adventures" subtitle="places and adventures that mean something to me">
+      <Section id="adventures" title="my adventures" subtitle="places that mean something to me">
         <p>
           check out my{' '}
           <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">
             polarsteps
           </a>
-          {' '}for now — more coming soon.
+          {' '}for now — more to come :)
         </p>
 
         {adventures.length > 0 && (
