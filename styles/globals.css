@@ -568,8 +568,12 @@ a.work-card:focus-visible {
 }
 
 .contact-compact-row a:hover,
+.contact-social-links a:hover {
+  color: var(--color-text);
+  transform: translateY(-2px);
+}
+
 .contact-compact-row a:focus-visible,
-.contact-social-links a:hover,
 .contact-social-links a:focus-visible {
   color: var(--color-text);
   outline: 1px solid var(--color-text);
