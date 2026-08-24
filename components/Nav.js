@@ -1,13 +1,21 @@
 import Link from 'next/link'
 
 const links = [
-  { href: '/#work', label: 'my work' },
-  { href: '/#adventures', label: 'my adventures' },
-  { href: '/#thoughts', label: 'my thoughts' },
-  { href: '/#contact', label: 'contact me' },
+  { id: 'work', label: 'my work' },
+  { id: 'adventures', label: 'my adventures' },
+  { id: 'thoughts', label: 'my thoughts' },
+  { id: 'contact', label: 'contact me' },
 ]
 
 export default function Nav() {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id)
+    if (!section) return
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    section.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' })
+  }
+
   return (
     <nav className="nav">
       <div className="nav-inner">
@@ -15,14 +23,15 @@ export default function Nav() {
           sheldon lewis
         </Link>
         <div className="nav-links">
-          {links.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
+          {links.map(({ id, label }) => (
+            <button
+              key={id}
+              type="button"
               className="nav-link"
+              onClick={() => scrollToSection(id)}
             >
               {label}
-            </Link>
+            </button>
           ))}
         </div>
       </div>
