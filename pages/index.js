@@ -85,7 +85,7 @@ export default function Home({ thoughts }) {
                     style={{ '--work-card-accent': item.accent }}
                     aria-hidden="true"
                   >
-                    {item.mark}
+                    <span className="work-card-mark-glyph">{item.mark}</span>
                   </span>
                   <span className="work-card-content">
                     <span className="work-card-title">{item.title}</span>
