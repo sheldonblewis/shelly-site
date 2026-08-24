@@ -549,15 +549,16 @@ a.work-card:focus-visible {
 }
 
 .contact-icon {
-  width: 18px;
-  height: 18px;
-  margin-top: 0.35rem;
+  width: 15px;
+  height: 15px;
+  margin: 0.42rem 0 0 1px;
   color: var(--color-text-tertiary);
-  stroke: currentColor;
-  stroke-width: 1.7;
+  stroke: var(--color-text-tertiary);
+  stroke-width: 1.25;
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
+  opacity: 0.8;
 }
 
 .contact-email-links {
