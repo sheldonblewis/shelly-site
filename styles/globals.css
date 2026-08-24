@@ -424,6 +424,7 @@ a.work-card:focus-visible {
 }
 
 .work-card-mark {
+  align-self: flex-start;
   width: 38px;
   height: 38px;
   display: grid;
@@ -433,9 +434,13 @@ a.work-card:focus-visible {
   background: color-mix(in srgb, var(--work-card-accent) 12%, var(--color-bg));
   color: var(--work-card-accent);
   font-family: var(--font-serif);
-  padding-top: 2px;
   font-size: 1.25rem;
   line-height: 1;
+}
+
+.work-card-mark-glyph {
+  display: block;
+  transform: translateY(2px);
 }
 
 .work-card-content {
