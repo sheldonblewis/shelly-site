@@ -67,7 +67,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.4;
   margin-bottom: 1rem;
 }
@@ -631,8 +631,8 @@ a.work-card:focus-visible .work-card-logo {
 }
 
 .adventure-name {
-  margin-bottom: 0.625rem;
-  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
 }
 
 .adventure-description {
