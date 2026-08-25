@@ -434,16 +434,16 @@ p {
   text-decoration: none;
 }
 
-.work-card--world-labs { --work-card-hover: #dcd4f2; }
-.work-card--theory { --work-card-hover: #f1eee5; }
-.work-card--amazon { --work-card-hover: #ffd6a0; }
-.work-card--openai { --work-card-hover: #e0e0da; }
-.work-card--diligent { --work-card-hover: #dce9c8; }
-.work-card--electric-mind { --work-card-hover: #d9d8f0; }
-.work-card--interac { --work-card-hover: #ffec9f; }
+.work-card--world-labs { --work-card-hover: #e9e5f4; }
+.work-card--theory { --work-card-hover: #f5f2ea; }
+.work-card--amazon { --work-card-hover: #ffe9cc; }
+.work-card--openai { --work-card-hover: #ebebe6; }
+.work-card--diligent { --work-card-hover: #e8f0dc; }
+.work-card--electric-mind { --work-card-hover: #eceaf5; }
+.work-card--interac { --work-card-hover: #fff4c8; }
 
 .work-card--electric-mind:hover {
-  background-image: linear-gradient(135deg, #d9e4ff, #e5d6ef);
+  background-image: linear-gradient(135deg, #e8eefb, #eee6f3);
 }
 
 .work-card-shell.placeholder .work-card {
