@@ -65,7 +65,7 @@ export default function Home({ thoughts }) {
             <span className="location-dot" aria-hidden="true" />
             <span>
               {`currently in ${location || 'toronto'}. `}
-              <a href="https://cal.com/sheldonblewis" className="subtle-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://cal.com/sheldonblewis" className="subtle-link lift-link" target="_blank" rel="noopener noreferrer">
                 get coffee with me!
               </a>
             </span>
@@ -147,7 +147,7 @@ export default function Home({ thoughts }) {
       <Section id="adventures" title="my adventures" subtitle="places that mean something to me">
         <p className="adventures-intro">
           a small collection of chapters so far. you can also follow along on{' '}
-          <a href="https://polarsteps.com/sheldonlewis" className="subtle-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://polarsteps.com/sheldonlewis" className="subtle-link lift-link" target="_blank" rel="noopener noreferrer">
             polarsteps
           </a>.
         </p>
