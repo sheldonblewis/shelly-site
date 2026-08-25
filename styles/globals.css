@@ -67,7 +67,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.4;
   margin-bottom: 1rem;
 }
@@ -521,15 +521,15 @@ a.work-card:focus-visible .work-card-logo {
 .adventures-grid {
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
-  margin-top: 3rem;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
 .adventure-item {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.75rem;
 }
 
 .adventure-item-right .adventure-visual {
@@ -542,7 +542,7 @@ a.work-card:focus-visible .work-card-logo {
 
 .adventure-visual {
   position: relative;
-  min-height: 205px;
+  min-height: 164px;
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: 6px;
@@ -620,7 +620,7 @@ a.work-card:focus-visible .work-card-logo {
 }
 
 .adventure-copy {
-  max-width: 17rem;
+  max-width: 15rem;
 }
 
 .adventure-years {
@@ -636,9 +636,9 @@ a.work-card:focus-visible .work-card-logo {
 }
 
 .adventure-description {
-  font-size: 0.875rem;
+  font-size: 0.813rem;
   color: var(--color-text-secondary);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 /* thoughts / blog */
@@ -987,8 +987,8 @@ a.work-card:focus-visible .work-card-logo {
   }
 
   .adventures-grid {
-    gap: 3rem;
-    margin-top: 2.25rem;
+    gap: 2.25rem;
+    margin-top: 1.75rem;
   }
 
   .adventure-item,
@@ -1003,7 +1003,7 @@ a.work-card:focus-visible .work-card-logo {
   }
 
   .adventure-visual {
-    min-height: 180px;
+    min-height: 150px;
   }
 
   .resume-hover-hint {
