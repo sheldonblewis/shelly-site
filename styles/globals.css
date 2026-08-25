@@ -705,8 +705,27 @@ a.work-card:focus-visible {
 }
 
 .contact-social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
   font-size: 0.813rem;
   color: var(--color-text-secondary);
+}
+
+.social-icon {
+  width: 13px;
+  height: 13px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.72;
+}
+
+.social-icon-x {
+  stroke-width: 1.5;
 }
 
 /* location badge */
