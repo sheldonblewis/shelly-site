@@ -83,16 +83,16 @@ export default function Home({ thoughts }) {
             {work.map((item, index) => {
               const card = (
                 <>
+                  {item.domain && (
+                    <img
+                      className="work-card-logo"
+                      src={`https://www.google.com/s2/favicons?domain=${item.domain}&sz=128`}
+                      alt=""
+                      width="96"
+                      height="96"
+                    />
+                  )}
                   <span className="work-card-meta">
-                    {item.domain && (
-                      <img
-                        className="work-card-logo"
-                        src={`https://www.google.com/s2/favicons?domain=${item.domain}&sz=128`}
-                        alt=""
-                        width="32"
-                        height="32"
-                      />
-                    )}
                     <span className="work-card-date">{item.date}</span>
                   </span>
                   <span className="work-card-content">
@@ -107,13 +107,13 @@ export default function Home({ thoughts }) {
                   {item.href ? (
                     <Link
                       href={item.href}
-                      className="work-card"
+                      className={`work-card${item.tone ? ` work-card--${item.tone}` : ''}`}
                       {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     >
                       {card}
                     </Link>
                   ) : (
-                    <div className="work-card">{card}</div>
+                    <div className={`work-card${item.tone ? ` work-card--${item.tone}` : ''}`}>{card}</div>
                   )}
                 </li>
               )
