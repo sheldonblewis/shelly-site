@@ -621,6 +621,8 @@ a.work-card:focus-visible .work-card-logo {
 
 .adventure-copy {
   max-width: 15rem;
+  justify-self: center;
+  text-align: center;
 }
 
 .adventure-years {
