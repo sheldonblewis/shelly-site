@@ -151,6 +151,25 @@ p {
   color: var(--color-text-tertiary);
 }
 
+/* retrospective note */
+.retrospective-note {
+  max-width: 34rem;
+  margin: 1rem 0 3rem;
+  padding: 1rem 1.125rem;
+  border-left: 1px solid var(--color-text-tertiary);
+  background: rgba(240, 240, 236, 0.45);
+}
+
+.retrospective-note p {
+  font-size: 0.813rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.retrospective-note span {
+  color: var(--color-text);
+}
+
 /* mdx prose */
 .prose {
   font-size: 0.938rem;
