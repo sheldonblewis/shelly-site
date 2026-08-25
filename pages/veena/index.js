@@ -16,7 +16,12 @@ export default function Veena({ veena }) {
       <BackLink href="/#work">my work</BackLink>
 
       <div className="section">
-        <h1 style={{ marginBottom: '3rem' }}>veena</h1>
+        <h1>veena</h1>
+        <aside className="retrospective-note">
+          <p>
+            <span>note from aug 25, 2026:</span> here are the scribbling thoughts and ambitions of 21-year-old me. in hindsight, i recognize a continued difficulty in execution, but i appreciate the desire to self-express and share thoughts.
+          </p>
+        </aside>
         <div className="prose">
           <MDXRemote {...veena.mdxSource} />
         </div>
