@@ -84,6 +84,13 @@ export default function Home({ thoughts }) {
               const card = (
                 <>
                   <span className="work-card-meta">
+                    <img
+                      className="work-card-logo"
+                      src={`https://www.google.com/s2/favicons?domain=${item.domain}&sz=128`}
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
                     <span className="work-card-date">{item.date}</span>
                   </span>
                   <span className="work-card-content">
