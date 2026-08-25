@@ -727,8 +727,17 @@ a.work-card:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.38rem;
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--color-text-tertiary);
   font-size: 0.813rem;
   color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-social-links a:hover,
+.contact-social-links a:focus-visible {
+  border-bottom-color: var(--color-text);
 }
 
 .social-icon {
@@ -785,6 +794,16 @@ a.work-card:focus-visible {
 .subtle-link:focus-visible {
   outline: 1px solid var(--color-text);
   outline-offset: 3px;
+}
+
+.lift-link {
+  display: inline-block;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, transform 0.2s ease;
+}
+
+.lift-link:hover,
+.lift-link:focus-visible {
+  transform: translateY(-2px);
 }
 
 /* home */
