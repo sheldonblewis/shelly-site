@@ -753,9 +753,10 @@ a.work-card:focus-visible .work-card-logo {
 }
 
 .contact-social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.875rem;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 1.125rem;
+  row-gap: 0.75rem;
   margin-top: 1.5rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--color-border);
