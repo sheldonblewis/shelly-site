@@ -434,12 +434,17 @@ a.work-card:hover {
   text-decoration: none;
 }
 
-.work-card--world-labs { --work-card-hover: #dceaff; }
-.work-card--theory { --work-card-hover: #eee1ff; }
-.work-card--amazon { --work-card-hover: #ffe4c2; }
-.work-card--openai { --work-card-hover: #dce9df; }
-.work-card--electric-mind { --work-card-hover: #f1ddf3; }
+.work-card--world-labs { --work-card-hover: #dcd4f2; }
+.work-card--theory { --work-card-hover: #f1eee5; }
+.work-card--amazon { --work-card-hover: #ffd6a0; }
+.work-card--openai { --work-card-hover: #e0e0da; }
+.work-card--diligent { --work-card-hover: #dce9c8; }
+.work-card--electric-mind { --work-card-hover: #d9d8f0; }
 .work-card--interac { --work-card-hover: #ffec9f; }
+
+.work-card--electric-mind:hover {
+  background-image: linear-gradient(135deg, #d9e4ff, #e5d6ef);
+}
 
 .work-card-shell.placeholder .work-card {
   border-style: dashed;
@@ -458,12 +463,13 @@ a.work-card:hover {
   z-index: -1;
   left: 50%;
   top: 50%;
-  width: 88px;
-  height: 88px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   border-radius: 14px;
+  mix-blend-mode: multiply;
   filter: grayscale(1);
-  opacity: 0.14;
+  opacity: 0.13;
   transform: translate(-50%, -50%);
   transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 }
@@ -471,8 +477,8 @@ a.work-card:hover {
 a.work-card:hover .work-card-logo,
 a.work-card:focus-visible .work-card-logo {
   filter: grayscale(0);
-  opacity: 0.35;
-  transform: translate(-50%, -50%) scale(1.04);
+  opacity: 0.22;
+  transform: translate(-50%, -50%) scale(1.03);
 }
 
 .work-card-index,
