@@ -13,36 +13,26 @@ export default function StateMachines() {
         <h1 style={{ marginBottom: '2rem' }}>can we create abundance using state machines</h1>
 
         <div className="prose">
-          <p>
-            my working thesis is that abundance will be created by our ability to achieve exponential growth in physical industries using ai: manufacturing, energy, supply chain, and the systems around them.
-          </p>
+          <ul>
+            <li>
+              thesis is abundance will be created by our ability to achieve exponential growth in physical industries using ai (manufacturing, energy, supply chain, etc.).
+            </li>
+            <li>
+              physical industries&apos; growth, towards whatever metric (throughput, revenue, profit, etc.), comes from their decisions. decisions, functionally, are where they choose to allocate their assets. example: a manufacturing company&apos;s transition from window panes to bottles involves investing time to train employees, repurpose equipment, change clientele, etc. all of which can be quantified.
+            </li>
+            <li>
+              models, in theory, can view a larger decision space—they are just missing a way to model an allocation of assets, or a state, as verifiable ground truths. past that, continuously improving models are, and will be, able to infer its decision space and attached outcomes.
+            </li>
+            <li>
+              thus, we reach the state machine. my thesis on how to give models the potential to drastically increase margins, and achieve abundance in physical industries through optimization.
+            </li>
+          </ul>
 
-          <h2>decisions are allocations</h2>
-          <p>
-            physical industries grow—whether we measure throughput, revenue, profit, or something else—through the decisions they make. functionally, a decision is an allocation of assets.
-          </p>
-          <p>
-            consider a manufacturing company moving from window panes to bottles. it invests time in training employees, repurposes equipment, changes its customer base, and accepts a different operational profile. each of those choices can be described and quantified.
-          </p>
-
-          <h2>the missing state</h2>
-          <p>
-            models can, in theory, view a larger decision space than any individual operator. what they are missing is a way to model an allocation of assets—or a state—as a set of verifiable ground truths.
-          </p>
-          <p>
-            once that exists, continuously improving models should be able to infer the decision space around a business and the outcomes attached to its possible moves.
-          </p>
-
-          <h2>the state machine</h2>
-          <p>
-            that brings us to the state machine: my thesis for giving models the potential to drastically increase margins, and ultimately help create abundance in physical industries through optimization.
-          </p>
-
-          <h2>next</h2>
+          <p>next i will be:</p>
           <ol>
-            <li>find the best way to embed this context shape.</li>
-            <li>post-train a model to understand it.</li>
-            <li>learn how to evaluate and deploy it.</li>
+            <li>finding the best way to embed this context shape.</li>
+            <li>post-training a model to understand it.</li>
+            <li>learning how to evaluate and deploy it.</li>
           </ol>
         </div>
       </article>
