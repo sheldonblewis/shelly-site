@@ -407,31 +407,39 @@ p {
 }
 
 .work-card {
+  --work-card-bg: #f7f7f3;
+  --work-card-hover: #f1f1ec;
+  position: relative;
+  isolation: isolate;
   width: 100%;
   height: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: 6px;
-  background-color: #f7f7f3;
+  background-color: var(--work-card-bg);
   color: var(--color-text);
   text-decoration: none;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 a.work-card:hover {
   transform: translateY(-3px);
-  border-color: var(--color-text-tertiary);
+  border-color: color-mix(in srgb, var(--work-card-hover) 55%, var(--color-text));
+  background-color: var(--work-card-hover);
   box-shadow: 0 8px 20px rgba(26, 26, 26, 0.06);
   text-decoration: none;
 }
 
-a.work-card:focus-visible {
-  outline: 2px solid var(--color-text);
-  outline-offset: 2px;
-}
+.work-card--world-labs { --work-card-hover: #dceaff; }
+.work-card--theory { --work-card-hover: #eee1ff; }
+.work-card--amazon { --work-card-hover: #ffe4c2; }
+.work-card--openai { --work-card-hover: #dce9df; }
+.work-card--electric-mind { --work-card-hover: #f1ddf3; }
+.work-card--interac { --work-card-hover: #ffec9f; }
 
 .work-card-shell.placeholder .work-card {
   border-style: dashed;
@@ -446,19 +454,25 @@ a.work-card:focus-visible {
 }
 
 .work-card-logo {
-  width: 28px;
-  height: 28px;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  width: 88px;
+  height: 88px;
   object-fit: contain;
-  border-radius: 5px;
+  border-radius: 14px;
   filter: grayscale(1);
-  opacity: 0.48;
-  transition: filter 0.2s ease, opacity 0.2s ease;
+  opacity: 0.14;
+  transform: translate(-50%, -50%);
+  transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 
 a.work-card:hover .work-card-logo,
 a.work-card:focus-visible .work-card-logo {
   filter: grayscale(0);
-  opacity: 1;
+  opacity: 0.35;
+  transform: translate(-50%, -50%) scale(1.04);
 }
 
 .work-card-index,
