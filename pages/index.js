@@ -64,7 +64,7 @@ export default function Home({ thoughts }) {
           <div className="location-badge">
             <span className="location-dot" aria-hidden="true" />
             <span>
-              {`i'm currently in ${location || 'toronto'}. `}
+              {`currently in ${location || 'toronto'}. `}
               <a href="https://cal.com/sheldonblewis" className="subtle-link" target="_blank" rel="noopener noreferrer">
                 get coffee with me!
               </a>
