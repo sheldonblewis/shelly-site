@@ -193,10 +193,10 @@ export default function Home({ thoughts }) {
             </Link>
           ))}
 
-          <div className="thought-item">
+          <Link href="/state-machines" className="thought-item">
             <div className="thought-date">aug 25, 2026</div>
             <div className="thought-title">can we create abundance using state machines</div>
-          </div>
+          </Link>
 
           <Link href="/veena" className="thought-item veena-thought-item">
             <div className="thought-date">sep 29, 2025</div>
