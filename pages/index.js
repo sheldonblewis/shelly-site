@@ -144,9 +144,9 @@ export default function Home({ thoughts }) {
         </div>
       </Section>
 
-      <Section id="adventures" title="my adventures" subtitle="places that mean something to me">
+      <Section id="adventures" title="my adventures">
         <p className="adventures-intro">
-          a small collection of chapters so far. you can also follow along on{' '}
+          places that mean something to me. a small collection of chapters so far. you can also follow along on{' '}
           <a href="https://polarsteps.com/sheldonlewis" className="subtle-link lift-link" target="_blank" rel="noopener noreferrer">
             polarsteps
           </a>.
