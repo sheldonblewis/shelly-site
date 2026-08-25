@@ -1061,3 +1061,57 @@ a.work-card:focus-visible .work-card-logo {
     transition: none;
   }
 }
+
+/* 404 */
+.not-found-page {
+  min-height: 44vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.not-found-lockup {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-secondary);
+}
+
+.not-found-code {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.not-found-divider {
+  width: 1px;
+  height: 1.9rem;
+  margin: 0 1rem;
+  background: var(--color-border);
+}
+
+.not-found-lockup p {
+  font-size: 0.813rem;
+  line-height: 1;
+}
+
+.not-found-home {
+  font-size: 0.813rem;
+  color: var(--color-text-tertiary);
+}
+
+@media (max-width: 420px) {
+  .not-found-lockup {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .not-found-divider {
+    width: 1.9rem;
+    height: 1px;
+    margin: 0;
+  }
+}
+
