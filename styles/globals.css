@@ -516,8 +516,8 @@ a.work-card:focus-visible .work-card-logo {
 /* adventures */
 .adventures-intro {
   max-width: 31rem;
-  font-size: 0.813rem;
-  line-height: 1.65;
+  font-size: 0.75rem;
+  line-height: 1.6;
 }
 
 .adventures-grid {
