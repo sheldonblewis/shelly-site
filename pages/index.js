@@ -219,10 +219,11 @@ export default function Home({ thoughts }) {
         </div>
 
         <nav className="contact-social-links" aria-label="social links">
-          <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">polarsteps</a>
+          <a href="https://x.com/sheldonblewis" target="_blank" rel="noopener noreferrer">twitter / X</a>
           <a href="https://linkedin.com/in/sheldonblewis" target="_blank" rel="noopener noreferrer">linkedin</a>
           <a href="https://github.com/sheldonblewis" target="_blank" rel="noopener noreferrer">github</a>
           <a href="https://instagram.com/_sheldonlewis" target="_blank" rel="noopener noreferrer">instagram</a>
+          <a href="https://polarsteps.com/sheldonlewis" target="_blank" rel="noopener noreferrer">polarsteps</a>
         </nav>
       </Section>
     </>
