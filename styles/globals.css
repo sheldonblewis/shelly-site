@@ -454,7 +454,7 @@ p {
 .work-card-meta {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 0.75rem;
 }
 
