@@ -5,12 +5,12 @@ const contact = {
   },
   emails: [
     {
-      href: 'mailto:sheldon.lewis@uwaterloo.ca',
-      text: 'sheldon.lewis@uwaterloo.ca',
-    },
-    {
       href: 'mailto:sheldonblewis@gmail.com',
       text: 'sheldonblewis@gmail.com',
+    },
+    {
+      href: 'mailto:sheldon.lewis@uwaterloo.ca',
+      text: 'sheldon.lewis@uwaterloo.ca',
     },
   ],
 }
