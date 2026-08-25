@@ -502,13 +502,13 @@ a.work-card:focus-visible {
 #thoughts .thoughts-list {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 
 .thought-item {
   margin: 0 -1rem;
   padding: 1.5rem 1rem;
-  border-bottom: 1px solid var(--color-border);
   display: block;
   text-decoration: none;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, outline-color 0.2s ease, transform 0.2s ease;
@@ -522,16 +522,6 @@ a.work-card:focus-visible {
   border-radius: 6px;
   box-shadow: 0 8px 20px rgba(26, 26, 26, 0.08);
   transform: translateY(-3px);
-}
-
-.thought-item:first-child {
-  border-top: 1px solid var(--color-border);
-}
-
-.thought-item-before-veena,
-.thought-item.veena-thought-item {
-  border-top: 0;
-  border-bottom: 0;
 }
 
 .thought-date {
