@@ -165,10 +165,10 @@ export default function Home({ thoughts }) {
 
       <Section id="adventures" title="my adventures">
         <p className="adventures-intro">
-          places that mean something to me. a small collection of chapters so far. you can also follow along on{' '}
+          places that mean something to me. check out my{' '}
           <a href="https://polarsteps.com/sheldonlewis" className="subtle-link lift-link" target="_blank" rel="noopener noreferrer">
             polarsteps
-          </a>.
+          </a>{' '}too!
         </p>
 
         <div className="adventures-grid">
