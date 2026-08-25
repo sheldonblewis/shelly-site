@@ -462,7 +462,7 @@ p {
   position: absolute;
   z-index: -1;
   left: 50%;
-  top: 50%;
+  top: 37%;
   width: 64px;
   height: 64px;
   object-fit: contain;
@@ -476,8 +476,8 @@ p {
 
 a.work-card:hover .work-card-logo,
 a.work-card:focus-visible .work-card-logo {
-  filter: grayscale(0);
-  opacity: 0.22;
+  filter: grayscale(0) saturate(1.15);
+  opacity: 0.3;
   transform: translate(-50%, -50%) scale(1.03);
 }
 
