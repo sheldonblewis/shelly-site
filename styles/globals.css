@@ -552,6 +552,11 @@ a.work-card:focus-visible {
   line-height: 1.7;
 }
 
+.thought-subtitle {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+}
+
 /* contact */
 .contact-compact {
   display: flex;
