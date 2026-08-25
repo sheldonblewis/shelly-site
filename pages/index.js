@@ -145,27 +145,30 @@ export default function Home({ thoughts }) {
       </Section>
 
       <Section id="adventures" title="my adventures" subtitle="places that mean something to me">
-        <p>
-          check out my{' '}
+        <p className="adventures-intro">
+          a small collection of chapters so far. you can also follow along on{' '}
           <a href="https://polarsteps.com/sheldonlewis" className="subtle-link" target="_blank" rel="noopener noreferrer">
             polarsteps
-          </a>
-          {' '}for now — more to come :)
+          </a>.
         </p>
 
-        {adventures.length > 0 && (
-          <div className="adventures-grid">
-            {adventures.map((adventure) => (
-              <div key={adventure.name} className="adventure-item">
-                <div className="adventure-image">
-                  {adventure.image && <img src={adventure.image} alt={adventure.name} />}
-                </div>
-                <div className="adventure-name">{adventure.name}</div>
+        <div className="adventures-grid">
+          {adventures.map((adventure, index) => (
+            <article key={adventure.id} className={`adventure-item adventure-item-${index % 2 === 0 ? 'left' : 'right'}`}>
+              <div className={`adventure-visual adventure-visual-${adventure.tone}`} aria-hidden="true">
+                <span className="adventure-orbit adventure-orbit-one" />
+                <span className="adventure-orbit adventure-orbit-two" />
+                <span className="adventure-pin" />
+                <span className="adventure-marker">{adventure.marker}</span>
+              </div>
+              <div className="adventure-copy">
+                <div className="adventure-years">{adventure.years}</div>
+                <h3 className="adventure-name">{adventure.place}</h3>
                 <p className="adventure-description">{adventure.description}</p>
               </div>
-            ))}
-          </div>
-        )}
+            </article>
+          ))}
+        </div>
       </Section>
 
       <Section id="thoughts" title="my thoughts">
