@@ -891,6 +891,26 @@ a.work-card:focus-visible {
     grid-auto-columns: 168px;
   }
 
+  .adventures-grid {
+    gap: 3rem;
+    margin-top: 2.25rem;
+  }
+
+  .adventure-item,
+  .adventure-item-right {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .adventure-item-right .adventure-visual,
+  .adventure-item-right .adventure-copy {
+    order: initial;
+  }
+
+  .adventure-visual {
+    min-height: 180px;
+  }
+
   .resume-hover-hint {
     display: none;
   }
