@@ -30,6 +30,16 @@ export default function Home({ thoughts }) {
 
   useEffect(() => () => window.clearTimeout(resumeReadyTimer.current), [])
 
+  useEffect(() => {
+    const targetId = window.sessionStorage.getItem('home-scroll-target')
+    if (!targetId) return
+
+    window.sessionStorage.removeItem('home-scroll-target')
+    window.requestAnimationFrame(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'auto', block: 'start' })
+    })
+  }, [])
+
   const beginResumePreview = () => {
     window.clearTimeout(resumeReadyTimer.current)
     setResumeReady(false)
