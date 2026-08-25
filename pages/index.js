@@ -164,7 +164,6 @@ export default function Home({ thoughts }) {
               <div className="adventure-copy">
                 <div className="adventure-years">{adventure.years}</div>
                 <h3 className="adventure-name">{adventure.place}</h3>
-                <p className="adventure-description">{adventure.description}</p>
               </div>
             </article>
           ))}
