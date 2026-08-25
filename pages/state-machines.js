@@ -6,7 +6,7 @@ export default function StateMachines() {
     <>
       <PageMeta title="can we create abundance using state machines" />
 
-      <BackLink href="/#thoughts">my thoughts</BackLink>
+      <BackLink scrollTarget="thoughts">my thoughts</BackLink>
 
       <article className="section">
         <h1>can we create abundance using state machines</h1>
