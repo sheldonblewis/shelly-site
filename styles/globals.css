@@ -426,7 +426,7 @@ p {
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-a.work-card:hover {
+.work-card:hover {
   transform: translateY(-3px);
   border-color: color-mix(in srgb, var(--work-card-hover) 55%, var(--color-text));
   background-color: var(--work-card-hover);
